@@ -1,4 +1,4 @@
-import { PostModalProps } from "@/interfaces";
+import { type PostModalProps } from "@/interfaces";
 import React from "react";
 
 const PostModal: React.FC<PostModalProps> = ({ close, onSubmit }) => {
