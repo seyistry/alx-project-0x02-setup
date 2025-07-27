@@ -1,6 +1,7 @@
+import { PostModalProps } from "@/interfaces";
 import React from "react";
 
-const PostModal = ({ close, onSubmit }) => {
+const PostModal: React.FC<PostModalProps> = ({ close, onSubmit }) => {
   const [title, setTitle] = React.useState("");
   const [content, setContent] = React.useState("");
 
