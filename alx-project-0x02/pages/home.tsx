@@ -1,5 +1,6 @@
 import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
+import Header from "@/components/layout/Header";
 import { CardProps } from "@/interfaces";
 import React, { useState } from "react";
 
@@ -11,7 +12,7 @@ const posts = [
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [sitePost, setSitePost] = useState<CardProps[] >(posts);
+  const [sitePost, setSitePost] = useState<CardProps[]>(posts);
 
   const handleAddPost = (newPost: CardProps) => {
     setSitePost((prev) => [...prev, { ...newPost }]);
@@ -19,6 +20,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-10">
+      <Header />
       {openModal ? (
         <PostModal close={setOpenModal} onSubmit={handleAddPost} />
       ) : null}
